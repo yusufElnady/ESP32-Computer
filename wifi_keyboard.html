@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+	</head>
+	<body>
+		<h1>The Keyboard</h1>
+		<div id="keys"></div>
+
+		<script>
+			let container = document.getElementById("keys");
+			for (let i = 0; i < 26; i++) {
+				let new_anchor = document.createElement("a");
+				new_anchor.href = "/key/" + String.fromCharCode(65+i);
+				let new_button = document.createElement("button");
+				new_button.textContent = String.fromCharCode(65+i);
+				new_anchor.appendChild(new_button);
+				container.appendChild(new_anchor);
+			}
+		</script>
+	</body>
+</html>
